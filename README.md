@@ -104,3 +104,143 @@ failed to parse manifest at path .\wally.toml
 Caused by:
     missing field `version` for key `package` at line 1 column 1
 ```
+
+
+- Attempt #7
+```toml
+[package]
+name = "coffilhg/test"
+version = ""
+```
+*wally install results in:*
+```bash
+failed to parse manifest at path .\wally.toml
+
+Caused by:
+    expected more input for key `package.version` at line 3 column 11
+```
+
+
+- Attempt #8
+```toml
+[package]
+name = "coffilhg/test"
+version = "more input"
+```
+*wally install results in:*
+```bash
+failed to parse manifest at path .\wally.toml
+
+Caused by:
+    encountered unexpected token: AlphaNumeric("more") for key `package.version` at line 3 column 11
+```
+
+
+- Attempt #9
+```toml
+[package]
+name = "coffilhg/test"
+version = "123"
+```
+*wally install results in:*
+```bash
+failed to parse manifest at path .\wally.toml
+
+Caused by:
+    expected more input for key `package.version` at line 3 column 11
+```
+
+
+- Attempt #10
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+```
+*wally install results in:*
+```bash
+failed to parse manifest at path .\wally.toml
+
+Caused by:
+    missing field `registry` for key `package` at line 1 column 1
+```
+
+
+- Attempt #11
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = ""
+```
+*wally install results in:*
+```bash
+failed to parse manifest at path .\wally.toml
+
+Caused by:
+    missing field `realm` for key `package` at line 1 column 1
+```
+
+
+- Attempt #12
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = ""
+realm = ""
+```
+*wally install results in:*
+```bash
+failed to parse manifest at path .\wally.toml
+
+Caused by:
+    unknown variant ``, expected one of `server`, `shared`, `dev` for key `package.realm` at line 1 column 1
+```
+
+
+- Attempt #13
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = ""
+realm = "dev"
+```
+*wally install results in:*
+```bash
+relative URL without a base
+```
+
+# First success!
+
+- Attempt #14
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+```
+*wally install results in:*
+```bash
+[INFO ] Updating package index https://github.com/upliftgames/wally-index...
+[INFO ] Downloaded 0 packages!
+```
+
+
+- Attempt #15
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+
+[dependencies]
+```
+*wally install results in:*
+```bash
+[INFO ] Updating package index https://github.com/upliftgames/wally-index...
+[INFO ] Downloaded 0 packages!
+```
