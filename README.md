@@ -314,3 +314,30 @@ TestEZ = "roblox/testez@0.4.1"
 | [x] goes to | dependencies | server-dependencies | dev-dependencies |
 |-------------|--------------|---------------------|------------------|
 | dir name | Packages | ServerPackages | DevPackages |
+
+# What if these dirs exist and are populated / used already?
+
+- Attempt #19
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+
+[dependencies]
+CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
+
+[server-dependencies]
+ProfileStoreV2 = "coffilhg/profilestorev2@2.0.3"
+
+[dev-dependencies]
+TestEZ = "roblox/testez@0.4.1"
+```
+*wally install results in:*
+```bash
+[INFO ] Updating package index https://github.com/upliftgames/wally-index...
+[INFO ] Downloaded 5 packages!
+```
+
+# `Wally` just deletes them, glad I had git commit'ed them!
