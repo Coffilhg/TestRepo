@@ -1,4 +1,12 @@
 # Hello World!
+### So I was wondering, who exactly decides where the Packages go, when you run `wally install`
+### This goofy test helps figure this out
+**Attempts #9 and #13 are worth looking into**
+
+-# **On #9 wally could give us more information (same can be applied to #7)**
+
+-# **On #13 I had no idea what wally was referring to, good thing we have AI available today...**
+
 
 Running `wally install` with...
 
