@@ -284,3 +284,33 @@ CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
 [INFO ] Updating package index https://github.com/upliftgames/wally-index...
 [INFO ] Downloaded 3 packages!
 ```
+
+
+- Attempt #18
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+
+[dependencies]
+CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
+
+[server-dependencies]
+ProfileStoreV2 = "coffilhg/profilestorev2@2.0.3"
+
+[dev-dependencies]
+TestEZ = "roblox/testez@0.4.1"
+```
+*wally install results in:*
+```bash
+[INFO ] Updating package index https://github.com/upliftgames/wally-index...
+[INFO ] Downloaded 5 packages!
+```
+
+# In conclusion...
+`wally` is ultimately the one who decides how to name the Dirs where Packages go
+| [x] goes to | dependencies | server-dependencies | dev-dependencies |
+|-------------|--------------|---------------------|------------------|
+| dir name | Packages | ServerPackages | DevPackages |

@@ -13,11 +13,21 @@ version = "1.0.5"
 dependencies = []
 
 [[package]]
+name = "coffilhg/profilestorev2"
+version = "2.0.3"
+dependencies = []
+
+[[package]]
 name = "coffilhg/test"
 version = "1.2.3"
-dependencies = [["CoffeeObjects", "coffilhg/coffeeobjects@2.3.5"]]
+dependencies = [["CoffeeObjects", "coffilhg/coffeeobjects@2.3.5"], ["ProfileStoreV2", "coffilhg/profilestorev2@2.0.3"], ["TestEZ", "roblox/testez@0.4.1"]]
 
 [[package]]
 name = "data-oriented-house/lemonsignal"
 version = "2.0.0"
+dependencies = []
+
+[[package]]
+name = "roblox/testez"
+version = "0.4.1"
 dependencies = []

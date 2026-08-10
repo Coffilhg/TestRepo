@@ -8,5 +8,7 @@ realm = "dev"
 CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
 
 [server-dependencies]
+ProfileStoreV2 = "coffilhg/profilestorev2@2.0.3"
 
 [dev-dependencies]
+TestEZ = "roblox/testez@0.4.1"
