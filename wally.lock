@@ -3,6 +3,21 @@
 registry = "test"
 
 [[package]]
+name = "coffilhg/coffeeobjects"
+version = "2.3.5"
+dependencies = [["CoffeeParser", "coffilhg/coffeeparser@1.0.5"], ["LemonSignal", "data-oriented-house/lemonsignal@2.0.0"]]
+
+[[package]]
+name = "coffilhg/coffeeparser"
+version = "1.0.5"
+dependencies = []
+
+[[package]]
 name = "coffilhg/test"
 version = "1.2.3"
+dependencies = [["CoffeeObjects", "coffilhg/coffeeobjects@2.3.5"]]
+
+[[package]]
+name = "data-oriented-house/lemonsignal"
+version = "2.0.0"
 dependencies = []

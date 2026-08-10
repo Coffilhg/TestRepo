@@ -244,3 +244,43 @@ realm = "dev"
 [INFO ] Updating package index https://github.com/upliftgames/wally-index...
 [INFO ] Downloaded 0 packages!
 ```
+
+
+- Attempt #16
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+
+[dependencies]
+CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
+```
+*wally install results in:*
+```bash
+[INFO ] Updating package index https://github.com/upliftgames/wally-index...
+[INFO ] Downloaded 3 packages!
+```
+
+
+- Attempt #17
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+
+[dependencies]
+CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
+
+[server-dependencies]
+
+[dev-dependencies]
+```
+*wally install results in:*
+```bash
+[INFO ] Updating package index https://github.com/upliftgames/wally-index...
+[INFO ] Downloaded 3 packages!
+```

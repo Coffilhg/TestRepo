@@ -5,3 +5,8 @@ registry = "https://github.com/upliftgames/wally-index"
 realm = "dev"
 
 [dependencies]
+CoffeeObjects = "coffilhg/coffeeobjects@2.3.5"
+
+[server-dependencies]
+
+[dev-dependencies]
