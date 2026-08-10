@@ -3,9 +3,9 @@
 ### This goofy test helps figure this out
 **Attempts #9 and #13 are worth looking into**
 
--# **On #9 wally could give us more information (same can be applied to #7)**
+> **On #9 wally could give us more information (same can be applied to #7)**
 
--# **On #13 I had no idea what wally was referring to, good thing we have AI available today...**
+> **On #13 I had no idea what wally was referring to, good thing we have AI available today...**
 
 
 Running `wally install` with...
@@ -122,7 +122,7 @@ Caused by:
 ```
 
 
-- Attempt #9
+# Attempt #9
 ```toml
 [package]
 name = "coffilhg/test"
@@ -185,7 +185,7 @@ Caused by:
 ```
 
 
-- Attempt #13
+# Attempt #13
 ```toml
 [package]
 name = "coffilhg/test"
@@ -327,3 +327,25 @@ TestEZ = "roblox/testez@0.4.1"
 ```
 
 # `Wally` just deletes them, glad I had git commit'ed them!
+
+
+# If you read so far...
+Here's a cool package manager related article "**[So you want to write a package manager](<https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527>)**"
+
+This little experiment also uncovers the minimal possible working `wally.toml`.
+
+i.e.
+```toml
+[package]
+name = "coffilhg/test"
+version = "1.2.3"
+registry = "https://github.com/upliftgames/wally-index"
+realm = "dev"
+```
+where
+- the form SCOPE/NAME for key `package.name` (names can only contain lowercase characters, digits and '-')
+- **[SemVer](<https://semver.org/>)** format for `package.version`
+- `package.registry` is whatever, that does not produce the error **relative URL without a base** (as seen in test #13)
+- expected one of `server`, `shared`, `dev` for key `package.realm`
+
+> **The LICENSE doesn't matter, this is a recycled testing repository.**
